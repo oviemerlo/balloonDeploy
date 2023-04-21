@@ -1,0 +1,95 @@
+body, .header-container {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+/* Reset default margin and padding for header */
+.header-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: beige; /* Set the background color to beige */
+  }
+  
+  /* Display logo and icons as inline elements */
+.logo, .icons {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+  
+  /* Add margin and padding to logo if needed */
+  .logo {
+    margin-right: 10px; /* Example margin */
+    padding: 5px; /* Example padding */
+    
+  }
+
+  
+  /* Style Font Awesome icons */
+.icons li {
+    list-style-type: none;
+    margin-right: 30px; /* Example margin */
+  }
+  
+  /* Add custom styles to Font Awesome icons */
+.icons li i {
+    font-size: 40px; /* Example font size */
+    color: #3207b5; /* Example color */
+  }
+
+  /* Set width of document to occupy 80% of the screen */
+  .body-container {
+    width: 80%;
+    margin: 0 auto; /* Center align the document */
+  }
+
+  /* Set image width to 100% and height to auto */
+.home-image {
+    max-width: 500px;
+    height: auto;
+  }
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 500px;
+    
+}
+
+.model {
+  display: block;
+  justify-content: space-around;
+  padding: 5px;
+  
+}
+
+.image-container img{
+  object-fit: fill;
+  width: 500px;
+  height: 500px;
+  overflow-y: hidden;
+  justify-content: space-around;
+
+}
+
+.card {
+  background-color: rgba(32, 4, 4, 0.027);
+  display: block;
+  align-items: center;
+  text-indent: 70px;
+}
+
+.card-body  {
+  display: flex;
+  
+  flex-direction: row;
+  margin-left: 50px
+}
+
+
+  

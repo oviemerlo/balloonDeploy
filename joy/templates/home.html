@@ -1,0 +1,67 @@
+<!-- templates/home.html-->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Ojayballoons{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+    <script src="https://kit.fontawesome.com/d1502c7609.js"></script>   
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo">
+            
+            <img src="{% static 'photo/ojay-logo.jpg' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/oj.ojafe" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                <li><a href="https://www.instagram.com/ojayballoons/" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl"></i></a></li>
+                <li><a href="tel:7789574905 #"><i class="fa-solid fa-square-phone-flip fa-2xl"></i>(778) 957-4905</a></li>
+                <li id="home"><a href="mailto:ojayballoons@yahoo.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href=#>Contact Us</a></li>
+                <li><a href="delivery.html">Delivery Zone</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    {% block content %}
+    
+    <main class="body-container">
+        
+        <div class="image-container">
+        
+            {% for ojay in object_list %}
+            <div class="model">   <!-- This is to ensure each photo and header aligns in block style-->
+                <h3>{{ojay.title}}</h3>
+                <img src="{{ ojay.cover.url }}" alt="{{ ojay.title}}" class="home-image">
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    {% endblock %}
+    <footer class="card">
+        <div class="card-header">
+          <h4><i>We add flavour and style to your event</i></h4>
+        </div>
+        <div class="card-body">
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/oj.ojafe" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                <li><a href="https://www.instagram.com/ojayballoons/" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl"></i></a></li>
+                <li><a href="tel:7789574905 #"><i class="fa-solid fa-square-phone-flip fa-2xl"></i>(778) 957-4905</a></li>
+                <li id="home"><a href="mailto:ojayballoons@yahoo.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a></li>
+                
+            </ul>
+          
+        </div>
+        <div><h6>(c)Copyright 2023. All Rights Reserved</h6></div>
+      </div>
+
+</body>
+</html>
